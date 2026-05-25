@@ -1,0 +1,35 @@
+//{"TEST_route":"POST /api/deposit","user_id":"2","amount":"510.00","comment":"qwerДо~\"\\:`@#$%;&amp; *(),<.?/|польty","xhr_status":404}
+{"TEST_route":"POST /api/add","user_id":"1","amount":"0","comment":"0","xhr_status":201}
+{"TEST_route":"POST /api/add","user_id":"2","amount":"0","comment":"0","xhr_status":201}
+{"TEST_route":"POST /api/add","user_id":"3","amount":"0","comment":"0","xhr_status":201}
+{"TEST_route":"POST /api/add","user_id":"-1","amount":"0","comment":"0","xhr_status":422}
+{"TEST_route":"POST /api/add","user_id":"user2","amount":"0","comment":"0","xhr_status":422}
+{"TEST_route":"POST /api/deposit","user_id":"2","amount":"500.00","comment":"Пополнение через карту","xhr_status":200}
+{"TEST_route":"POST /api/deposit","user_id":"-2","amount":"500.00","comment":"Пополнение через карту","xhr_status":422}
+{"TEST_route":"POST /api/deposit","user_id":"2","amount":"-500.00","comment":"Пополнение через карту","xhr_status":422}
+{"TEST_route":"POST /api/deposit","user_id":"карта","amount":"500.00","comment":"Пополнение через карту","xhr_status":422}
+{"TEST_route":"POST /api/deposit","user_id":"3","amount":"сумма","comment":"Пополнение через карту","xhr_status":422}
+{"TEST_route":"POST /api/deposit","user_id":"100000000000","amount":"500.00","comment":"Пополнение через карту","xhr_status":413}
+{"TEST_route":"POST /api/deposit","user_id":"3","amount":"100000000000","comment":"Пополнение через карту","xhr_status":200}
+{"TEST_route":"POST /api/deposit","user_id":"5","amount":"100.00","comment":"Пополнение через карту","xhr_status":404}
+{"TEST_route":"POST /api/withdraw","user_id":"2","amount":"500.00","comment":"Списание через карту","xhr_status":200}
+{"TEST_route":"POST /api/withdraw","user_id":"2","amount":"5.00","comment":"Списаниечерез карту","xhr_status":409}
+{"TEST_route":"POST /api/withdraw","user_id":"-2","amount":"500.00","comment":"Списаниечерез карту","xhr_status":422}
+{"TEST_route":"POST /api/withdraw","user_id":"2","amount":"-500.00","comment":"Списаниечерез карту","xhr_status":422}
+{"TEST_route":"POST /api/withdraw","user_id":"карта","amount":"500.00","comment":"Списаниечерез карту","xhr_status":422}
+{"TEST_route":"POST /api/withdraw","user_id":"3","amount":"сумма","comment":"Списаниечерез карту","xhr_status":422}
+{"TEST_route":"POST /api/withdraw","user_id":"100000000000","amount":"500.00","comment":"Списаниечерез карту","xhr_status":413}
+{"TEST_route":"POST /api/withdraw","user_id":"3","amount":"100000000000","comment":"Списаниечерез карту","xhr_status":409}
+{"TEST_route":"POST /api/withdraw","user_id":"5","amount":"300.00","comment":"Списаниечерез карту","xhr_status":404}
+{"TEST_route":"POST /api/transfer","from_user_id":"2","to_user_id":"3","amount":"50.00","comment":"Перевод через карту","xhr_status":409}
+{"TEST_route":"POST /api/transfer","from_user_id":"2","to_user_id":"3","amount":"qwe.00","comment":"Переводчерез карту","xhr_status":422}
+{"TEST_route":"POST /api/transfer","from_user_id":"5","to_user_id":"3","amount":"5000.00","comment":"Переводчерез карту","xhr_status":404}
+{"TEST_route":"POST /api/transfer","from_user_id":"2","to_user_id":"3","amount":"-50.00","comment":"Переводчерез карту","xhr_status":422}
+{"TEST_route":"POST /api/transfer","from_user_id":"2","to_user_id":"30","amount":"50.00","comment":"Переводчерез карту","xhr_status":404}
+{"TEST_route":"POST /api/transfer","from_user_id":"2","to_user_id":"qwe","amount":"10.00","comment":"Переводчерез карту","xhr_status":422}
+{"TEST_route":"POST /api/transfer","from_user_id":"200000000000000","to_user_id":"3","amount":"50.00","comment":"Переводчерез карту","xhr_status":413}
+{"TEST_route":"POST /api/transfer","from_user_id":"2","to_user_id":"3000000000000000","amount":"10.00","comment":"Переводчерез карту","xhr_status":413}
+{"TEST_route":"POST /api/transfer","from_user_id":"2","to_user_id":"3","amount":"10000000000000000000000000.00","comment":"Переводчерез карту","xhr_status":413}
+{"TEST_route":"GET /api/balance/{user_id}","user_id":"100000000000","xhr_status":422}
+{"TEST_route":"GET /api/balance/{user_id}","user_id":"1","xhr_status":200}
+{"TEST_route":"GET /api/balance/{user_id}","user_id":"qwe","xhr_status":422}
